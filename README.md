@@ -4,7 +4,7 @@
 Small Python tools for looking at ports and network packets.
 These Are meant to be run in Kali Linux and use [Scapy](https://scapy.net/).
 
-##Contents
+## Contents
 |File	|What it does|
 | :--- |  ---: |
 |packet_sniffer.py	|Shows ARP, ICMP, TCP and UDP packets as they are captured|
@@ -18,6 +18,7 @@ Used to scan ports.
 ### Packet Sniffer
 This is a packet sniffer that relies on scapy.
 Run the packet sniffer with:
+
 sudo python3 .../Port-manager/packet_sniffer.py
 You neeed to be in the file directory to run it.
 
@@ -138,13 +139,5 @@ When finished: `sudo ip link del veth0`
 `arp_test_traffic.py` refuses to send on any interface that does not start with `veth` or `dummy`, because its packets pretend to be a gateway and would disrupt a real network.
 
 ## Files not to commit
-
-Add these to `.gitignore` (the file must be named exactly `.gitignore`, with no `.txt`):
-
-```
-network_log.txt
-*.pcap
-__pycache__/
-```
 
 `network_log.txt` and real captures contain the addresses of your network and the sites you visit.
